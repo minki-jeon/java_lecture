@@ -5,9 +5,9 @@ public class C05Integer {
         // 정수형
         // byte(1 byte, 8 bits, BYTE)
         byte a;
-        a = 127;    // 최대값 (2^8/2 = 0~127)
+        a = 127;    // 최대값 (2^7-1 = 0~127)
         System.out.println("a = " + a);
-        a = -128;   // 최소값 (2^8/2 = -1 ~ -128)
+        a = -128;   // 최소값 (-2^7 = -1 ~ -128)
         System.out.println("a = " + a);
 
         // short(2 bytes, 16 bits, WORD)
@@ -33,7 +33,7 @@ public class C05Integer {
 
         // 기본적으로 java 코드에서 정수 literal는 int로 해석
         // long type literal은 끝에 L(l) 붙여야 한다.
-        
+
 
     }
 }
