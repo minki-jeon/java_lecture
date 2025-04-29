@@ -1,4 +1,4 @@
-package ch02.ch02.sec08;
+package ch02.sec08;
 
 public class CastingExample {
     //* Reference : [Book. 이것이 자바다] p.60
