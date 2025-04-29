@@ -25,6 +25,12 @@ public class C15Casting {
         System.out.println("b = " + b);
         System.out.println("a = " + a);     // '-37' 출력
 
+        // 실수형 -> 정수형 (강제변환) : 소수점 버릴 때 유용
+        double c = 123.456;
+        int d = (int) c;        // type casting
+        System.out.println("c = " + c);
+        System.out.println("d = " + d);
+
 
     }
 }
