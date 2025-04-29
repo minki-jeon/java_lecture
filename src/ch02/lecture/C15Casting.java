@@ -23,7 +23,7 @@ public class C15Casting {
         b = 987;
         a = (byte) b;
         System.out.println("b = " + b);
-        System.out.println("a = " + a);
+        System.out.println("a = " + a);     // '-37' 출력
 
 
     }
