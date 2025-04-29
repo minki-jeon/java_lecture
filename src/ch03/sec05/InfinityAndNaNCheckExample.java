@@ -11,6 +11,10 @@ public class InfinityAndNaNCheckExample {
         // 잘못된 코드
         System.out.println(z + 2);
 
+        double a = x % y;
+        System.out.println("a = " + a);
+        System.out.println(a + 2);
+
         // 알맞은 코드
         if (Double.isInfinite(z) || Double.isNaN(z)) {
             System.out.println("값 산출 불가");
