@@ -1,18 +1,19 @@
 package ch03.sec07;
 
 public class LogicalOperatorExample {
+    //* Reference : [Book. 이것이 자바다] p.94
     public static void main(String[] args) {
-        int charCode = 'A';
+        int charCode = 'A';         // = 65
 //        int charCode = 'a';
 //        int charCode = '5';
 
-        if ((65 <= charCode) & (charCode <= 90)) {
+        if ((65 <= charCode) & (charCode <= 90)) {      // 'A' <= charCode <= 'Z'
             System.out.println("대문자이군요.");
         }
-        if ((97 <= charCode) && (charCode <= 122)) {
+        if ((97 <= charCode) && (charCode <= 122)) {    // 'a' <= charCode <= 'z'
             System.out.println("소문자이군요.");
         }
-        if ((48 <= charCode) && (charCode <= 57)) {
+        if ((48 <= charCode) && (charCode <= 57)) {     // '0' <= charCode <= '9'
             System.out.println("0~9 숫자이군요.");
         }
 
