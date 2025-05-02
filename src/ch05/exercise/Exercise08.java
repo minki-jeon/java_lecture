@@ -8,7 +8,6 @@ public class Exercise08 {
                 {83, 92, 96},
                 {78, 83, 93, 87, 88}
         };
-
         int sum = 0;
         double avg = 0;
         int total = 0;
