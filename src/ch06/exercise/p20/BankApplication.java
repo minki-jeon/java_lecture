@@ -15,37 +15,43 @@ public class BankApplication {
             System.out.println("1.계좌생성 | 2.계좌목록 | 3.예금 | 4.출금 | 5.종료");
             System.out.println("----------------------------------------------");
             System.out.print("선택> ");
-            int select = Integer.parseInt(sc.nextLine());
+            String select = sc.nextLine();
 
             switch (select) {
-                case 1 -> {
-                    Account account = new Account();
+                case "1" -> {
+//                    Account account = new Account();
                     System.out.println("----------");
                     System.out.println("계좌생성");
                     System.out.println("----------");
 
                     System.out.print("계좌번호: ");
-                    account.setAccountNumber(sc.nextLine());
+//                    account.setAccountNumber(sc.nextLine());
+                    String number = sc.nextLine();
 
                     System.out.print("계좌주: ");
-                    account.setName(sc.nextLine());
+//                    account.setName(sc.nextLine());
+                    String name = sc.nextLine();
 
                     System.out.print("초기입금액: ");
-                    account.setBalance(Integer.parseInt(sc.nextLine()));
+//                    account.setBalance(Integer.parseInt(sc.nextLine()));
+                    int money = Integer.parseInt(sc.nextLine());
 
+                    Account account = new Account(number, name, money);
                     accounts[seq] = account;
                     seq++;
                     System.out.println("결과: 계좌가 생성되었습니다.");
                 }
-                case 2 -> {
+                case "2" -> {
                     System.out.println("----------");
                     System.out.println("계좌목록");
                     System.out.println("----------");
                     for (int i = 0; i < seq; i++) {
-                        System.out.println(accounts[i].getAccountNumber() + "    " + accounts[i].getName() + "    " + accounts[i].getBalance());
+                        System.out.println(accounts[i].getAccountNumber()
+                                + "\t" + accounts[i].getName()
+                                + "\t" + accounts[i].getBalance());
                     }
                 }
-                case 3 -> {
+                case "3" -> {
                     System.out.println("----------");
                     System.out.println("예금");
                     System.out.println("----------");
@@ -53,18 +59,18 @@ public class BankApplication {
                     System.out.print("계좌번호: ");
                     String number = sc.nextLine();
                     System.out.print("예금액: ");
-                    int amount = Integer.parseInt(sc.nextLine());
+                    int money = Integer.parseInt(sc.nextLine());
 
                     for (int i = 0; i < seq; i++) {
                         if (number.equals(accounts[i].getAccountNumber())) {
-                            int balance = accounts[i].getBalance() + amount;
+                            int balance = accounts[i].getBalance() + money;
                             accounts[i].setBalance(balance);
                             break;
                         }
                     }
                     System.out.println("결과: 예금이 성공되었습니다.");
                 }
-                case 4 -> {
+                case "4" -> {
                     System.out.println("----------");
                     System.out.println("출금");
                     System.out.println("----------");
@@ -72,18 +78,18 @@ public class BankApplication {
                     System.out.print("계좌번호: ");
                     String number = sc.nextLine();
                     System.out.print("출금액: ");
-                    int amount = Integer.parseInt(sc.nextLine());
+                    int money = Integer.parseInt(sc.nextLine());
 
                     for (int i = 0; i < seq; i++) {
                         if (number.equals(accounts[i].getAccountNumber())) {
-                            int balance = accounts[i].getBalance() - amount;
+                            int balance = accounts[i].getBalance() - money;
                             accounts[i].setBalance(balance);
                             break;
                         }
                     }
                     System.out.println("결과: 출금이 성공되었습니다.");
                 }
-                case 5 -> {
+                case "5" -> {
                     System.out.println("프로그램 종료");
                     run = false;
                 }
