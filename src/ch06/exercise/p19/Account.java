@@ -3,8 +3,8 @@ package ch06.exercise.p19;
 public class Account {
     //* Reference : [Book. 이것이 자바다] p.282
 
-    static final int MIN_BALANCE = 0;
-    static final int MAX_BALANCE = 1_000_000;
+    public static final int MIN_BALANCE = 0;
+    public static final int MAX_BALANCE = 1_000_000;
 
     private int balance;
 
