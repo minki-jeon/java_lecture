@@ -10,5 +10,9 @@ public class ChildExample {
         parent.method1();
         parent.method2();
 //        parent.method3();
+
+        // 강제형변환(type casting) (위험)
+        Child c = (Child) parent;
+        c.method3();
     }
 }
