@@ -1,7 +1,5 @@
 package ch08.lecture.p01interface;
 
-import ch06.lecture.p01class.MyClass02;
-
 public class App02 {
     Child021 a = new Child021();
     Parent02 b = a;
@@ -15,7 +13,7 @@ public class App02 {
     // 상속받은 클래스와 인터페이스 타입 각각 형변환
     Parent02 g = f;             // 자동형변환
     MyInterface01 h = f;        // 자동형변환
-    MyInterface02 i = f         // 자동형변환
+    MyInterface02 i = f;         // 자동형변환
 }
 
 // @formatter:off
@@ -25,6 +23,6 @@ class Parent02 {}
 // 클래스 상속은 하나만 가능
 class Child021 extends Parent02 {}
 // 인터페이스 구현은 여러개 가능
-class myClass02 implements MyInterface02, MyInterface01 {}
+class MyClass02 implements MyInterface02, MyInterface01 {}
 // 클래스 상속과, 인터페이스 구현 동시 가능
 class Child022 extends Parent02 implements MyInterface01, MyInterface02 {}
