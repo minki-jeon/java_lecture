@@ -11,10 +11,16 @@ public class App03 {
             MyClass031 b = (MyClass031) a;
         }
 
+        if (a instanceof MyClass031 b) {
+            // b의 메소드 호출
+        }
+
         if (a instanceof MyClass032) {
             System.out.println("코드 실행 2");
             MyClass032 c = (MyClass032) a;      //실행 x
         }
+
+        System.out.println("프로그램 종료");
     }
 }
 
