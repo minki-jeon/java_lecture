@@ -9,7 +9,7 @@ public class App06 {
         Student06 c = new Student06(1, "kim");
         Student06 d = new Student06(1, "son");
         int ah = a.hashCode();
-        
+
         System.out.println("ah = " + ah);
         System.out.println("b.hashCode() = " + b.hashCode());
         System.out.println("c.hashCode() = " + c.hashCode());
@@ -26,7 +26,7 @@ class Student06 {
         this.name = name;
     }
 
-    // hashCode, equals 재정의 (Generate ->  equals() and hashCode() )
+    // hashCode, equals 재정의 (자동완성 : Generate ->  equals() and hashCode() )
 
     @Override
     public boolean equals(Object object) {
