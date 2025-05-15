@@ -10,6 +10,11 @@ public class App09 {
 //            }
 //        };
         MyInterface09 s = MyClass09::action;
+
+        // 객체 생성, 호출
+        MyClass09 obj = new MyClass09();
+        o.some(obj, 10, 20);
+        s.some(obj, 30, 40);
     }
 }
 
