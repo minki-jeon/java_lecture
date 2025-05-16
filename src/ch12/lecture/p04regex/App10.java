@@ -13,12 +13,13 @@ public class App10 {
             String input = sc.nextLine();
 
             boolean result = Pattern.matches(regex, input);
+            
             if (result) {
                 System.out.println("유효한 전화번호");
             } else {
                 System.out.println("유효하지 않는 전화번호");
             }
-
+            System.out.println();
         }
     }
 }
