@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Solutions {
+public class Solution {
     public int lastStoneWeight(int[] stones) {
         List<Integer> list = new ArrayList<>();
         for (int s : stones) {
