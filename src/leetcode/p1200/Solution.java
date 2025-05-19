@@ -19,6 +19,7 @@ public class Solution {
         // 정렬
         Collections.sort(input);
 
+        // (Way 1)
         // 요소들 간의 값의 차이가 가장 적은 값
         int gap = input.get(1) - input.get(0);
         for (int i = 1; i < input.size() - 1; i++) {
@@ -37,6 +38,36 @@ public class Solution {
                 result.add(li);
             }
         }
+
+        // (Way 2)
+        // List<List<Integer>> result = new ArrayList<>();
+        // int min = Integer.MAX_VALUE;
+
+        // // 인접한 두 값의 차가 가장 적은 차이를 구해서 저장
+        // for (int i = 0; i < input.size() - 1; i++) {
+        //     Integer n1 = input.get(i);
+        //     Integer n2 = input.get(i + 1);
+
+        //     int diff = n2 - n1;
+
+        //     min = Math.min(min, diff);
+        // }
+
+        // // 인접한 두 값의 차가 (2)에서 구한 값과 같으면
+        // for (int i = 0; i < input.size() - 1; i++) {
+        //     Integer n1 = input.get(i);
+        //     Integer n2 = input.get(i + 1);
+        //     int diff = n2 - n1;
+        //     if (diff == min) {
+        //         //    두 값을 원소로 갖는 List를 만들어서
+        //         //    결과 list에 추가 하기
+        //         List<Integer> row = new ArrayList<>();
+        //         row.add(n1);
+        //         row.add(n2);
+
+        //         result.add(row);
+        //     }
+        // }
 
         return result;
     }
