@@ -22,6 +22,17 @@ public class Solution {
 //        List<Integer> prev;
 //        List<Integer> result = new ArrayList<>();
 //        result.add(1);  // first-index
+        /*
+        current.add(prev.get(0) + prev.get(1));
+        current.add(prev.get(1) + prev.get(2));
+        current.add(prev.get(2) + prev.get(3));
+
+        ...
+        current.add(prev.get(i) + prev.get(i + 1));
+
+        ...
+        current.add(prev.get(prev.size() - 2) + prev.get(prev.size() - 1));
+        */
 //        for (int currentIndex = 0; currentIndex < rowIndex; currentIndex++) {
 //            prev = result;
 //            result = new ArrayList<>();
