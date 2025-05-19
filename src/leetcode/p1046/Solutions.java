@@ -18,14 +18,14 @@ public class Solutions {
 
         while (list.size() > 1) {
             Collections.sort(list);
-            int last1 = list.removeLast();
-            int last2 = list.removeLast();
+            Integer last1 = list.removeLast();
+            Integer last2 = list.removeLast();
             int n = last1 - last2;
             if (n > 0) list.add(n);
         }
 
-        if (list.size() == 0) list.add(0);
+        if (list.isEmpty()) return 0;
 
-        return list.get(0);
+        return list.getFirst();
     }
 }
