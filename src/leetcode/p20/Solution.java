@@ -5,8 +5,9 @@ import java.util.Stack;
 public class Solution {
     // 20. Valid Parentheses
     public boolean isValid(String s) {
-        Stack<String> stack = new Stack<>();
 
+        // (Way 1)
+        Stack<String> stack = new Stack<>();
         for (String c : s.split("")) {
             if ("(".equals(c) || "{".equals(c) || "[".equals(c)) {
                 stack.push(c);
@@ -25,6 +26,43 @@ public class Solution {
         }
         if (!stack.isEmpty()) return false;
 
-        return true;
+        // (Way 2)
+        // Stack<Character> stack = new Stack<>();
+        // for (char c : s.toCharArray()) {
+        //     switch (c) {
+        //         case ']' -> {
+        //             if (stack.isEmpty()) {
+        //                 return false;
+        //             }
+        //             char open = stack.pop();
+        //             if (open != '[') {
+        //                 return false;
+        //             }
+        //         }
+        //         case '}' -> {
+        //             if (stack.isEmpty()) {
+        //                 return false;
+        //             }
+        //             char open = stack.pop();
+        //             if (open != '{') {
+        //                 return false;
+        //             }
+        //         }
+        //         case ')' -> {
+        //             if (stack.isEmpty()) {
+        //                 return false;
+        //             }
+        //             char open = stack.pop();
+        //             if (open != '(') {
+        //                 return false;
+        //             }
+        //         }
+        //         default -> {
+        //             stack.push(c);
+        //         }
+        //     }
+        // }
+
+        return stack.isEmpty();
     }
 }
