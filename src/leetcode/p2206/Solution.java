@@ -6,7 +6,6 @@ import java.util.Map;
 public class Solution {
     public boolean divideArray(int[] nums) {
         // 2206. Divide Array Into Equal Pairs
-        boolean result = true;
 
         Map<Integer, Integer> map = new HashMap<>();
         for (int n : nums) {
@@ -17,10 +16,18 @@ public class Solution {
             }
         }
 
+        // (Way 1)
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if (entry.getValue() % 2 != 0) result = false;
+            if (entry.getValue() % 2 != 0) return false;
         }
 
-        return result;
+        // (Way 2)
+        // for (Integer value : map.values()) {
+        //     if (value % 2 == 1) {
+        //         return false;
+        //     }
+        // }
+
+        return true;
     }
 }
