@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class HashMapExample {
+    //* Reference : [Book. 이것이 자바다] p.660
     public static void main(String[] args) {
         Map<String, Integer> map = new HashMap<>();
 
@@ -21,7 +22,7 @@ public class HashMapExample {
         System.out.println(key + ":" + value);
         System.out.println();
 
-        // key-value 반환을 위해 key Set 컬렉션, Iterator
+        // key-value 반환을 위해 `key Set` 컬렉션, Iterator
         Set<String> keySet = map.keySet();
         Iterator<String> keyIterator = keySet.iterator();
         while (keyIterator.hasNext()) {
@@ -31,7 +32,7 @@ public class HashMapExample {
         }
         System.out.println();
 
-        // key-value 반환을 위해 entry set 컬렉션, Iterator
+        // key-value 반환을 위해 `entry set` 컬렉션, Iterator
         Set<Map.Entry<String, Integer>> entrySet = map.entrySet();
         Iterator<Map.Entry<String, Integer>> entryIterator = entrySet.iterator();
         while (entryIterator.hasNext()) {
