@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
-    public static void main(String[] args) {
-        int numRows = 5;
+    public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> result = new ArrayList<>();
 
+        // (Way 1)
         List<Integer> list_pre;
         List<Integer> list = new ArrayList<>();
         list.add(1);    // first-index;
@@ -28,6 +28,27 @@ public class Solution {
             result.add(list);
         }
 
-        System.out.println(result);
+        // (Way 2)
+//        List<Integer> firstRow = new ArrayList<>();
+//        firstRow.add(1);
+//        result.add(firstRow);
+//        for (int j = 1; j < numRows; j++) {
+//            List<Integer> prev = result.getLast();   // 이전행
+//            List<Integer> row = new ArrayList<>();    // 현재행
+//            result.add(row);        // 참조값이 저장되므로 이후에도 result 안의 row에 저장된다.
+//
+//            row.add(1);
+//
+//            //중간의 값들
+//            for (int i = 0; i < prev.size() - 1; i++) {
+//                int n1 = prev.get(i);
+//                int n2 = prev.get(i + 1);
+//                row.add(n1 + n2);
+//            }
+//
+//            row.add(1);
+//        }
+
+        return result;
     }
 }
