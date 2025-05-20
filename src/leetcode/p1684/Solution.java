@@ -6,7 +6,7 @@ import java.util.Set;
 public class Solution {
     // 1684. Count the Number of Consistent Strings
     public int countConsistentStrings(String allowed, String[] words) {
-        
+
         // 1. allowed에 있는 각 문자(Character)를 저장한 Set 생성
         // - Set 생성, allowed의 각 문자 탐색하여 set에 저장
         // 2. Words에 있는 각 문자열을 전체 탐색해서 각 문자열의 문자가 allowed에 존재하는지 확인
@@ -24,7 +24,10 @@ public class Solution {
             boolean isChars = true;
             for (char c : w) {
                 boolean isChar = allowedSet.contains(c);
-                if (!isChar) isChars = false;
+                if (!isChar) {
+                    isChars = false;
+                    break;
+                }
             }
             if (isChars) {
                 count++;
