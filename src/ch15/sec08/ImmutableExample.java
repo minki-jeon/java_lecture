@@ -21,6 +21,21 @@ public class ImmutableExample {
         );
 //        immutableMap1.put(4, "D");      // 불가
 
+
+        // copyOf : unmodifiable collection
+        // Collections.unmodifiableList
+        // Collections.unmodifiableSet
+        // Collections.unmodifiableMap
+
+        // Arrays.asList : 배열을 List로 생성하는 메소드
+        String[] arr1 = {"a", "b", "c"};
+        List<String> list2 = Arrays.asList(arr1);
+        System.out.println(list2);
+//        list2.add("d");
+        list2.set(1, "d");
+        System.out.println(list2);
+
+
         // List 컬렉션을 불변 컬렉션으로 복사
         ArrayList<String> list = new ArrayList<>();
         list.add("A");
