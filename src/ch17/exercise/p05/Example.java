@@ -12,6 +12,15 @@ public class Example {
                 "Lambda Expressions",
                 "Java8 supports lambda expressions"
         );
+
+        //명령형
+        for (String item : list) {
+            String l = item.toLowerCase();
+            if (l.contains("java")) {
+                System.out.println(item);
+            }
+        }
+        
         list.stream()
                 .filter(n -> n.toLowerCase().contains("java"))
                 .forEach(System.out::println);
