@@ -5,8 +5,7 @@ import java.util.TreeSet;
 
 public class App03 {
     public static void main(String[] args) {
-        // TreeSet: 원소들이 natural ordering으로 정렬됨
-        // TreeSet : 원소들이 natural ordering(Comparable) 으로 정렬됨
+        // TreeSet: 원소들이 natural ordering(인터페이스 Comparable)으로 정렬됨
         Set<String> set1 = new TreeSet<>();
 
         set1.add("java");
