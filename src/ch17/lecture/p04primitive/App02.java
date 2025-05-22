@@ -1,4 +1,4 @@
-package ch17.lecture.p04;
+package ch17.lecture.p04primitive;
 
 import java.util.Arrays;
 import java.util.List;
