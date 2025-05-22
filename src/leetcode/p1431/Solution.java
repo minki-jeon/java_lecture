@@ -10,9 +10,10 @@ public class Solution {
         // (stream)
         int max = Arrays.stream(candies)
                 .max()
-                .getAsInt();
+                .orElse(0);
         return Arrays.stream(candies)
-                .mapToObj(s -> ((s + extraCandies) >= max)).toList();
+                .mapToObj(s -> ((s + extraCandies) >= max))
+                .toList();
 
 /*
         List<Integer> kids = Arrays.stream(candies).boxed().toList();
