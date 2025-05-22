@@ -6,6 +6,15 @@ import java.util.List;
 
 public class Solution {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+        // 1431. Kids With the Greatest Number of Candies
+        // (stream)
+        int max = Arrays.stream(candies)
+                .max()
+                .getAsInt();
+        return Arrays.stream(candies)
+                .mapToObj(s -> ((s + extraCandies) >= max)).toList();
+
+/*
         List<Integer> kids = Arrays.stream(candies).boxed().toList();
 
         // (Way 1)
@@ -42,5 +51,7 @@ public class Solution {
 //        }
 
         return result;
+
+ */
     }
 }
