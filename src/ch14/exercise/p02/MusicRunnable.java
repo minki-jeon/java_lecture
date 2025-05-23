@@ -1,6 +1,6 @@
 package ch14.exercise.p02;
 
-public class MusicRunnable extends Thread {
+public class MusicRunnable implements Runnable {
     //* Reference : [Book. 이것이 자바다] p.636
 
     @Override
