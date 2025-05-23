@@ -6,7 +6,11 @@ public class App12 {
     public static void main(String[] args) throws InterruptedException {
         List<Integer> l = new ArrayList<>();
 //        List<Integer> list = new Vector<>();
-        List<Integer> list = Collections.synchronizedList(l);
+        // Collections.synchronizedList: 기존 컬렉션 타입(LIst / Map / Set)을 동기화된 컬렉션으로 변환
+        List<Integer> list = Collections.synchronizedList(l); // Synchronized-ArrayList
+//        Map<String, Integer> map = Collections.synchronizedMap(new HashMap<>());
+//        Set<Integer> set = Collections.synchronizedSet(new HashSet<>());
+
 
         Random random = new Random();
 
