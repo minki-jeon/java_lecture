@@ -32,7 +32,9 @@ public class App10 {
 }
 
 class Box10 {
-    // AtomicInteger
+    // AtomicInteger : 원자성을 갖는 변수타입 (CAS;Compare-And-Swap 연산동작)
+    //	          - 연산작업 전의 값을 기억하고 있다가, 연산이 끝날 때 값이 변하지 않으면 결과를 적용하고
+    //	 	        값이 변경되었으면 연산을 다시 시도한다.
     private AtomicInteger value;
 
     public Box10() {
