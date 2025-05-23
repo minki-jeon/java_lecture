@@ -38,14 +38,14 @@ class Box10 {
     private AtomicInteger value;
 
     public Box10() {
-        value = new AtomicInteger(0);
+        value = new AtomicInteger(0);   // 초기값 0
     }
 
     public int getValue() {
-        return value.intValue();
+        return value.intValue();                // 현재 값을 int로 반환
     }
 
     public void increase() {
-        value.incrementAndGet();
+        value.incrementAndGet();               // 값을 1 증가시키고, 증가된 값 반환
     }
 }
