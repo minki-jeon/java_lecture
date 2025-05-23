@@ -1,6 +1,9 @@
 package ch14.lecture;
 
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class App10 {
     public static void main(String[] args) throws InterruptedException {
@@ -36,9 +39,12 @@ class Box10 {
     //	          - 연산작업 전의 값을 기억하고 있다가, 연산이 끝날 때 값이 변하지 않으면 결과를 적용하고
     //	 	        값이 변경되었으면 연산을 다시 시도한다.
     private AtomicInteger value;
-
+//    private AtomicBoolean value;
+//    private AtomicLong value;
+//    private AtomicReference value;
+    
     public Box10() {
-        value = new AtomicInteger(0);   // 초기값 0
+        value = new AtomicInteger(0);   // value 초기값 0
     }
 
     public int getValue() {
@@ -47,5 +53,6 @@ class Box10 {
 
     public void increase() {
         value.incrementAndGet();               // 값을 1 증가시키고, 증가된 값 반환
+//        value.decrementAndGet();               // 값을 1 감소시키고, 감소된 값 반환
     }
 }
