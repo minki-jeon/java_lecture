@@ -14,6 +14,7 @@ public class Example {
         System.out.println("원본 파일 경로: " + origin);
         System.out.println("복사 파일 경로: " + target);
 
+        long start = System.nanoTime();
         try {
             InputStream is = new FileInputStream(origin);
             BufferedInputStream bis = new BufferedInputStream(is);
@@ -36,6 +37,9 @@ public class Example {
 //            e.printStackTrace();
             System.out.println("원본 파일이 존재하지 않습니다.");
         }
+
+        long end = System.nanoTime();
+        System.out.println("(end-start) = " + (end - start));
 
 
     }
