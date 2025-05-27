@@ -11,9 +11,11 @@ public class App05Client {
         Socket socket = new Socket("192.168.0.5", 9876);
 
         try (socket) {
+            // Client(socket) -> 외부
             OutputStream os = socket.getOutputStream();
             BufferedOutputStream bos = new BufferedOutputStream(os);
 
+            // File-Data(Disk) Read -> Client(Memory)
             FileInputStream fis = new FileInputStream(file);
             BufferedInputStream bis = new BufferedInputStream(fis);
 

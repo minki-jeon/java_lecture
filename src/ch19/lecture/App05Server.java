@@ -18,9 +18,11 @@ public class App05Server {
 
                     Thread thread = new Thread(() -> {
                         try {
+                            // 외부Client -> Server(Socket)
                             InputStream is = socket.getInputStream();
                             BufferedInputStream bis = new BufferedInputStream(is);
 
+                            // Server(Memory) -> File-Data(Disk) Write
                             OutputStream os = new FileOutputStream(fileName);
                             BufferedOutputStream bos = new BufferedOutputStream(os);
 
