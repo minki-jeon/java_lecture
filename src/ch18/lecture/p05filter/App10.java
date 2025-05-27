@@ -14,7 +14,7 @@ public class App10 {
 
         try (oos; os) {
             oos.writeObject(book);      // 직렬화
-
+            oos.flush();
 
         }
         // 파일에 있는 데이터를 읽어서 역직렬화해서 객체로 얻기
