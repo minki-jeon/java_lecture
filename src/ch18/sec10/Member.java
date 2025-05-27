@@ -4,9 +4,12 @@ import java.io.Serializable;
 
 public class Member implements Serializable {
     //* Reference : [Book. 이것이 자바다] p.812
-    private static final long serialVersionUID = -622284561026719240L;
+    private static final long serialVersionUID = 10L;
     private String id;
     private String name;
+
+    private String address;
+    
 
     public Member(String id, String name) {
         this.id = id;

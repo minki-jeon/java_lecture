@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Product implements Serializable {
     //* Reference : [Book. 이것이 자바다] p.813
-    private static final long serialVersionUID = -621812868470078544L;
+    private static final long serialVersionUID = 2934L;
     private String name;
     private int price;
 
