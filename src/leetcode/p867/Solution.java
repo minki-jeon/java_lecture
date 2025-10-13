@@ -1,5 +1,9 @@
 package leetcode.p867;
 
+/**
+ * CodeSignal Q3 대비 문제
+ * 867. Transpose Matrix
+ */
 public class Solution {
     public int[][] transpose(int[][] matrix) {
         //* (Way 1)
